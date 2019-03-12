@@ -2,7 +2,7 @@
 # configuration vlues specified in the config module.
 
 from flask import Flask
-from sqlalchemy import SQLAlchemy
+from flask_sqlalchemy import SQLAlchemy
 from config import Configuration
 
 
