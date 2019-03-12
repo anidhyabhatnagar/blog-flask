@@ -2,6 +2,7 @@
 # to run our app in the DEBUG mode.
 
 class Configuration(object):
-    SERVER_NAME = '0.0.0.0:5000'
+    APPLICATION_DIR = os.path.dirname(os.path.realpath(__file__))
     DEBUG = True
+    SQLALCHEMY_DATABASE_URI = 'sqlite:///%s/blog.db' % APPLICATION_DIR
 
