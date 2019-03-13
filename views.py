@@ -1,10 +1,14 @@
 # The views moduel will contain a single view mapped to the root URL of the
 # site.
 
+from flask import render_template, request
 from app import app
 
 
 @app.route('/')
 def homepage():
-    return 'Home Page'
+    name = request.args.get('name')
+    if not name:
+        name = '<unknown>'
+    return render_template('homepage.html', name=name)
 
